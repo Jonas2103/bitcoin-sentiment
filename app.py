@@ -47,7 +47,7 @@ scores = scores.apply(lambda x: [1 if y > 0.2 else y for y in x])
 scores = scores.apply(lambda x: [-1 if y < -0.2 else y for y in x])
 scores = scores.apply(lambda x: [0 if 0.2 >= y >= -0.2 else y for y in x])
 
-# For each date now the proportion of negative and positive dates is calculated
+# For each date now the mean of the converted scores is calculated
 sen_values = []
 sen_dates = []
 
