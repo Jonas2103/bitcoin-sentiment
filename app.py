@@ -32,9 +32,11 @@ bitcoin_price = quandl.get("BCHAIN/MKPRU", start_date=start.strftime("%Y-%m-%d")
 for i in new_data.columns:
     new_data[i] = functions.process_text(new_data[i])
 
+# Initizalize Sentiment Intensity Analyzer
 sia = SIA()
 scores = pd.DataFrame()
 
+# Calculte compound polarity score for each reddit post title
 for i in new_data.columns:
     results = []
     for line in new_data[i]:
