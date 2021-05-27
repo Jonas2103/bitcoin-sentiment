@@ -65,7 +65,6 @@ def updateData(existing_data):
     dates = pd.to_datetime(temp_data.columns.astype(int), unit='s')
     # Calculate timestamp for yesterday at midnight (to get last starting point for data download)
     yesterday_midnight = datetime.datetime.combine(datetime.date.today()-datetime.timedelta(days=1), datetime.datetime.min.time())
-    yesterday_midnight_timestamp = (yesterday_midnight - pd.Timestamp("1970-01-01")) // pd.Timedelta('1s')
 
     # Check if last datapoint is earlier than yesterday midnight#
     if yesterday_midnight > dates[-1]:
