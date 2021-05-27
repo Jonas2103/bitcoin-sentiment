@@ -37,6 +37,7 @@ def getDates(start, end):
     after_days = [start + datetime.timedelta(days=i) for i in range(delta.days + 1)]
     before_days = [(start + datetime.timedelta(days=1)) + datetime.timedelta(days=i) for i in range(delta.days + 1)]
     df = pd.DataFrame({'after': after_days, 'before': before_days})
+    # Convert do unix timestamps
     df['after'] = (df['after'] - pd.Timestamp("1970-01-01")) // pd.Timedelta('1s')
     df['before'] = (df['before'] - pd.Timestamp("1970-01-01")) // pd.Timedelta('1s')
     return df 
@@ -57,7 +58,7 @@ def process_text(headlines):
 
 
 def updateData(existing_data):
-    """Updates existing_data, to include all dates until yesterday
+    """Updates existing_data, to include all dates until yesterday, column names are unix timestamps of the day at midnight
     existing_data: dataframe of existing data, where in each column there are the top 100 reddit posts in a given subreddit on a given day
     """
     temp_data = existing_data
