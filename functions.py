@@ -95,6 +95,8 @@ def updateData(existing_data):
         temp_data = temp_data.reindex(sorted(temp_data.columns), axis=1)
         
         # Remove date columns with less than 100 values (we set those to np.nan)
+        # So start date after writing data in app.py for next turn is last day we have data.
+        # So we can update missing days
         temp_data = temp_data.drop(temp_data.select_dtypes('float').columns, axis=1)
     
     return temp_data
