@@ -753,11 +753,7 @@ display: inline-block;
   width: 24px;
 }
 
-.button-buy-sell-chart-right{
-width: 48%;
-text-align: center;
-display: inline-block;
-}
+
 
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select{
 border: 1px solid #b4b4b4;
