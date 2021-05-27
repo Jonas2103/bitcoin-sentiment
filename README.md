@@ -49,9 +49,9 @@ Using the Quandl API we download daily price data from 01.01.2018 until today.
 ## Natural Language Processing 
 The Natural Language Processing Toolkit is used to determine the sentiment of the reddit post titles and to create a daily series of sentiment scores as described below:
 
-1. For each day, we tokenise each of the 100 entries: First we filter out stop words (meaning words which do add any meaning to the entries) and then we remove any punctuation or emojis. 
+1. For each day, we tokenise each of the 100 entries: First we filter out stop words (meaning words which do not add any meaning to the entries, like and, that, this, etc.) and then we remove any punctuation or emojis. 
 2. Using Natural Language Toolkits Vader Sentiment Analyizer (which is specifically for social media texts) we assign each of the 100 daily posts a sentiment score from -1 to 1.
-3. Now an arbitrary threshold is set from which onwards a posts is considered negative, neutral or positive. (Below -0.2 negative, above 0.2 positive, between neural).
+3. Now an arbitrary threshold is set from which onwards a posts is considered negative, neutral or positiCancel changesve. (Below -0.2 negative, above 0.2 positive, between neural).
 4. For each day a mean of the 100 sentiment score is calculated to receive a time series.
 
 ## Requirements
