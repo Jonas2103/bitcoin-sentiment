@@ -14,6 +14,8 @@ Additionally a bitcoin price series is downloaded from Quandl. This two dataseri
 
 And we can see that there is quite some relationship among both timeseries, as we can see that both move quiet closely together. Notice however, that the size of changes does not correspond, as both values are in different units. 
 
+![Alt text](/assets/preview.png)
+
 ## Data
 There are two data sources for this project. First there is the Pushshift API with which one can download reddit posts. The function getPushshift data downloads the top 100 reddit posts (with the highest score)  after and before given timestamps. This data is then saved to a data frame, where each column presents a given date, indicated by a timestamp of the day at midnight.
 
