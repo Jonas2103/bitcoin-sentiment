@@ -53,3 +53,12 @@ The Natural Language Processing Toolkit is used to determine the sentiment of th
 3. Now an arbitrary threshold is set from which onwards a posts is considered negative, neutral or positive. (Below -0.2 negative, above 0.2 positive, between neural).
 4. For each day a mean of the 100 sentiment score is calculated to receive a time series.
 
+## Requirements
+* pandas
+* requests
+* datetime
+* nltk
+* numpy
+* dash
+* plotly
+* quandl
