@@ -40,7 +40,8 @@ Past data (stored in reddit_posts.csv) has been downloaded using the getPushshif
 Each time app.py is run, the data is updated: 
 1. Check if yesterday is larger than the last stored date in the already existing data. 
 2. If yes, download the top 100 posts for the remaining days
-	* Notice: Sometimes Pushshift does not already have stored the latest posts. Therefore we omit all dates where we have less than 100 entries, so the last dates in the existing data is always the last day we have 100 entries. When updating the data again, the data might be available and we get a new last date in the stored data. Occasionally, data is not available for some dates (ca. 25 times sind 01.01.2018)
+	* Notice: Sometimes Pushshift does not already have stored the latest posts. Therefore we omit all dates where we have less than 100 entries, so the last dates in the existing data is always the last day we have 100 entries. When updating the data again, the data might be available and we get a new last date in the stored data. Occasionally, data is not available for some dates (ca. 25 times since 01.01.2018)
+	* Data from the 01.01.2018 has already been downloaded.
 
 ### Second Data Source: Quandl
 Using the Quandl API we download daily price data from 01.01.2018 until today.
