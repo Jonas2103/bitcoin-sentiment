@@ -19,9 +19,9 @@ def getPushshiftData(after, before, sub):
         sub: specific subreddit
     """
     url = 'https://api.pushshift.io/reddit/submission/search/?after='+str(after)+'&before='+str(before)+'&subreddit='+str(sub)+'&limit=1000&sort_type=score&sort=desc'
-    # print(url)
     r = requests.get(url).json()
     titles = []
+    # access title element in downloaded json file
     for x in r['data']:
         titles.append(x['title'])
     return titles
