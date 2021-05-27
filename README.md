@@ -63,3 +63,5 @@ The Natural Language Processing Toolkit is used to determine the sentiment of th
 * dash
 * plotly
 * quandl
+
+This was tested on Python 3.8.5 on 27.5.2021
